@@ -1,0 +1,50 @@
+{
+  "name": "vanilla-js-project-using-parcel",
+  "version": "1.0.0",
+  "description": "Template project for building vanilla javascript project",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html --open --no-source-maps",
+    "build": "rm -rf dist/* && parcel build index.html --no-source-maps",
+    "prod": "http-server dist/ -o",
+    "clean": "rm -rf dist/*",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itsRockyy/vanilla-js-project-using-parcel.git"
+  },
+  "keywords": [
+    "parcel",
+    "template",
+    "javascript"
+  ],
+  "author": "Abhijeet Saxena",
+  "license": "MIT",
+  "homepage": "/vanilla-js-project-using-parcel/",
+  "dependencies": {
+    "autoprefixer": "^9.7.5",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-modules": "^1.5.0",
+    "src": "^1.1.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-transform-runtime": "^7.9.0",
+    "@babel/preset-env": "^7.8.4",
+    "gh-pages": "^2.2.0",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^2.0.2"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {
+        "overrideBrowserslist": [
+          "> 1%",
+          "last 4 versions",
+          "ie >= 9"
+        ]
+      }
+    }
+  }
+}
